@@ -63,19 +63,19 @@ public class AccountUI extends BaseUI implements View.OnClickListener {
         accountUI = activity.findViewById(R.id.ui_account);
 
         addOfflineAccount = activity.findViewById(R.id.add_offline_account);
-        addMojangAccount = activity.findViewById(R.id.add_mojang_account);
-        addMicrosoftAccount = activity.findViewById(R.id.add_microsoft_account);
-        addLoginServer = activity.findViewById(R.id.add_login_server);
+//        addMojangAccount = activity.findViewById(R.id.add_mojang_account);
+//        addMicrosoftAccount = activity.findViewById(R.id.add_microsoft_account);
+//        addLoginServer = activity.findViewById(R.id.add_login_server);
 
         addOfflineAccount.setOnClickListener(this);
-        addMojangAccount.setOnClickListener(this);
-        addMicrosoftAccount.setOnClickListener(this);
-        addLoginServer.setOnClickListener(this);
+//        addMojangAccount.setOnClickListener(this);
+//        addMicrosoftAccount.setOnClickListener(this);
+//        addLoginServer.setOnClickListener(this);
 
-        externalServerList = activity.findViewById(R.id.external_server_list);
+//        externalServerList = activity.findViewById(R.id.external_server_list);
         accountList = activity.findViewById(R.id.account_list);
 
-        addMojangAccount.setVisibility(View.GONE);
+//        addMojangAccount.setVisibility(View.GONE);
 
         init();
     }
@@ -121,7 +121,7 @@ public class AccountUI extends BaseUI implements View.OnClickListener {
 
         serverList = InitializeSetting.initializeAuthlibInjectorServer(context);
         serverListAdapter = new AuthlibInjectorServerListAdapter(context,activity,serverList);
-        externalServerList.setAdapter(serverListAdapter);
+//        externalServerList.setAdapter(serverListAdapter);
     }
 
     @Override

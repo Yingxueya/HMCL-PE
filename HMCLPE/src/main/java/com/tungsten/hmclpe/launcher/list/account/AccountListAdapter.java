@@ -179,10 +179,10 @@ public class AccountListAdapter extends BaseAdapter {
             viewHolder.name = convertView.findViewById(R.id.name);
             viewHolder.type = convertView.findViewById(R.id.type);
             viewHolder.refresh = convertView.findViewById(R.id.refresh);
-            viewHolder.skin = convertView.findViewById(R.id.skin);
+//            viewHolder.skin = convertView.findViewById(R.id.skin);
             viewHolder.delete = convertView.findViewById(R.id.delete);
             viewHolder.refreshProgress = convertView.findViewById(R.id.refresh_account_progress);
-            viewHolder.uploadProgress = convertView.findViewById(R.id.upload_skin_progress);
+//            viewHolder.uploadProgress = convertView.findViewById(R.id.upload_skin_progress);
             activity.exteriorConfig.apply(viewHolder.check);
             convertView.setTag(viewHolder);
         }
@@ -435,42 +435,42 @@ public class AccountListAdapter extends BaseAdapter {
                 }).start();
             }
         });
-        if (account.loginType == 5) {
-            ((View) viewHolder.skin.getParent()).setVisibility(View.GONE);
-        }
-        else {
-            ((View) viewHolder.skin.getParent()).setVisibility(View.VISIBLE);
-        }
-        viewHolder.skin.setOnClickListener(v -> {
-            if (account.loginType == 1){
-                SkinPreviewDialog skinPreviewDialog = new SkinPreviewDialog(context, activity, account, offlineSkinSetting -> {
-                    account.offlineSkinSetting = offlineSkinSetting;
-                    if (isSelected) {
-                        activity.publicGameSetting.account = account;
-                        GsonUtils.savePublicGameSetting(activity.publicGameSetting, AppManifest.SETTING_DIR + "/public_game_setting.json");
-                    }
-                    activity.uiManager.accountUI.accounts.get(position).refresh(account);
-                    GsonUtils.saveAccounts(activity.uiManager.accountUI.accounts,AppManifest.ACCOUNT_DIR + "/accounts.json");
-                    activity.uiManager.accountUI.accountListAdapter.notifyDataSetChanged();
-                });
-                skinPreviewDialog.show();
-            }
-            else if (account.loginType == 3) {
-                Uri uri = Uri.parse("https://www.minecraft.net/zh-hans/msaprofile/mygames/editskin");
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                context.startActivity(intent);
-            }
-            else if (account.loginType == 4) {
-                skinPosition = position;
-                skinButton = viewHolder.skin;
-                skinProgress = viewHolder.uploadProgress;
-                Intent intent = new Intent(context, FileChooser.class);
-                intent.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.SINGLE_SELECTION.ordinal());
-                intent.putExtra(Constants.ALLOWED_FILE_EXTENSIONS, "png");
-                intent.putExtra(Constants.INITIAL_DIRECTORY, Environment.getExternalStorageDirectory().getAbsolutePath());
-                activity.startActivityForResult(intent, AccountUI.SELECT_SKIN_REQUEST);
-            }
-        });
+//        if (account.loginType == 5) {
+//            ((View) viewHolder.skin.getParent()).setVisibility(View.GONE);
+//        }
+//        else {
+//            ((View) viewHolder.skin.getParent()).setVisibility(View.VISIBLE);
+//        }
+//        viewHolder.skin.setOnClickListener(v -> {
+//            if (account.loginType == 1){
+//                SkinPreviewDialog skinPreviewDialog = new SkinPreviewDialog(context, activity, account, offlineSkinSetting -> {
+//                    account.offlineSkinSetting = offlineSkinSetting;
+//                    if (isSelected) {
+//                        activity.publicGameSetting.account = account;
+//                        GsonUtils.savePublicGameSetting(activity.publicGameSetting, AppManifest.SETTING_DIR + "/public_game_setting.json");
+//                    }
+//                    activity.uiManager.accountUI.accounts.get(position).refresh(account);
+//                    GsonUtils.saveAccounts(activity.uiManager.accountUI.accounts,AppManifest.ACCOUNT_DIR + "/accounts.json");
+//                    activity.uiManager.accountUI.accountListAdapter.notifyDataSetChanged();
+//                });
+//                skinPreviewDialog.show();
+//            }
+//            else if (account.loginType == 3) {
+//                Uri uri = Uri.parse("https://www.minecraft.net/zh-hans/msaprofile/mygames/editskin");
+//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                context.startActivity(intent);
+//            }
+//            else if (account.loginType == 4) {
+//                skinPosition = position;
+//                skinButton = viewHolder.skin;
+//                skinProgress = viewHolder.uploadProgress;
+//                Intent intent = new Intent(context, FileChooser.class);
+//                intent.putExtra(Constants.SELECTION_MODE, Constants.SELECTION_MODES.SINGLE_SELECTION.ordinal());
+//                intent.putExtra(Constants.ALLOWED_FILE_EXTENSIONS, "png");
+//                intent.putExtra(Constants.INITIAL_DIRECTORY, Environment.getExternalStorageDirectory().getAbsolutePath());
+//                activity.startActivityForResult(intent, AccountUI.SELECT_SKIN_REQUEST);
+//            }
+//        });
         viewHolder.delete.setOnClickListener(v -> {
             activity.uiManager.accountUI.accounts.remove(account);
             GsonUtils.saveAccounts(activity.uiManager.accountUI.accounts,AppManifest.ACCOUNT_DIR + "/accounts.json");

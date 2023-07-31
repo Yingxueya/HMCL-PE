@@ -47,7 +47,7 @@ public class AddOfflineAccountDialog extends Dialog implements View.OnClickListe
 
     private Button login;
     private Button cancel;
-    
+
     public AddOfflineAccountDialog(@NonNull Context context,ArrayList<Account> accounts,OnOfflineAccountAddListener onOfflineAccountAddListener) {
         super(context);
         this.context = context;
@@ -57,15 +57,15 @@ public class AddOfflineAccountDialog extends Dialog implements View.OnClickListe
         setCancelable(false);
         init();
     }
-    
+
     private void init(){
         editName = findViewById(R.id.edit_user_name);
         editUUID = findViewById(R.id.edit_uuid);
 
-        purchaseLink = findViewById(R.id.purchase_link);
-        purchaseLink.setMovementMethod(LinkMovementMethod.getInstance());
-        showAdvanceSetting = findViewById(R.id.show_advance_setting);
-        showAdvanceSetting.setOnClickListener(this);
+//        purchaseLink = findViewById(R.id.purchase_link);
+//        purchaseLink.setMovementMethod(LinkMovementMethod.getInstance());
+//        showAdvanceSetting = findViewById(R.id.show_advance_setting);
+//        showAdvanceSetting.setOnClickListener(this);
         spinView = findViewById(R.id.spin_view);
         editUUIDLayout = findViewById(R.id.edit_uuid_layout);
         hintLayout = findViewById(R.id.hint_layout);

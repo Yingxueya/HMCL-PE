@@ -69,8 +69,7 @@ public class InitializeSetting {
             contentList = GsonUtils.getContentListFromFile(AppManifest.GAME_FILE_DIRECTORY_DIR + "/game_file_directories.json");
         }
         else {
-            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_pri),AppManifest.DEFAULT_GAME_DIR,true));
-            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_sec),AppManifest.INNER_GAME_DIR,false));
+            contentList.add(new ContentListBean(context.getString(R.string.default_game_file_directory_list_sec),AppManifest.INNER_GAME_DIR,true));
             GsonUtils.saveContents(contentList,AppManifest.GAME_FILE_DIRECTORY_DIR + "/game_file_directories.json");
         }
         return contentList;
@@ -80,13 +79,13 @@ public class InitializeSetting {
         LauncherSetting launcherSetting;
         if (new File(AppManifest.SETTING_DIR + "/launcher_setting.json").exists()){
             launcherSetting = GsonUtils.getLauncherSettingFromFile(AppManifest.SETTING_DIR + "/launcher_setting.json");
-        }
-        else {
-            launcherSetting = new LauncherSetting(AppManifest.DEFAULT_GAME_DIR,new SourceSetting(true,1,0),0,64,false,true,false,false,false,"DEFAULT",new BackgroundSetting(0,"",""),AppManifest.DEFAULT_CACHE_DIR);
+        } else {
+            launcherSetting = new LauncherSetting(AppManifest.EXTERNAL_DIR+"/files/.minecraft",new SourceSetting(true,1,0),0,64,false,true,false,false,false,"DEFAULT",new BackgroundSetting(0,"",""),AppManifest.DEFAULT_CACHE_DIR);
             GsonUtils.saveLauncherSetting(launcherSetting,AppManifest.SETTING_DIR + "/launcher_setting.json");
         }
         return launcherSetting;
     }
+
 
     public static PublicGameSetting initializePublicGameSetting(Context context, MainActivity activity){
         PublicGameSetting publicGameSetting;
@@ -94,13 +93,7 @@ public class InitializeSetting {
             publicGameSetting = GsonUtils.getPublicGameSettingFromFile(AppManifest.SETTING_DIR + "/public_game_setting.json");
         }
         else {
-            String currentVersion;
-            if (SettingUtils.getLocalVersionNames(activity.launcherSetting.gameFileDirectory).size() != 0){
-                currentVersion = activity.launcherSetting.gameFileDirectory + "/versions/" + SettingUtils.getLocalVersionNames(activity.launcherSetting.gameFileDirectory).get(0);
-            }
-            else {
-                currentVersion = "";
-            }
+            String currentVersion = AppManifest.EXTERNAL_DIR+"/files/.minecraft/versions/"+AppManifest.SERVER_NAME;
             Account account = new Account(0,"","","","","","","","","","","");
             publicGameSetting = new PublicGameSetting(account,AppManifest.DEBUG_DIR,currentVersion);
             GsonUtils.savePublicGameSetting(publicGameSetting,AppManifest.SETTING_DIR + "/public_game_setting.json");

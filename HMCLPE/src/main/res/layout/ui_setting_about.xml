@@ -43,7 +43,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/ic_craft_table"
+                        android:background="@drawable/logo"
                         android:layout_gravity="center"/>
 
                     <LinearLayout
@@ -440,7 +440,7 @@
                     <ImageView
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:background="@drawable/ic_craft_table"
+                        android:background="@drawable/logo"
                         android:layout_gravity="center"/>
 
                     <LinearLayout

@@ -81,6 +81,23 @@ public class AssetsUtils {
         return this;
     }
 
+    public AssetsUtils copyAssetsToSDNoThread(final String srcPath, final String sdPath) {
+        currentPosition = 0;
+        try {
+            totalSize = getTotalSize(context,srcPath);
+            Log.e("assetsFileSize",Long.toString(totalSize));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        copyAssetsToDst(context, srcPath, sdPath);
+        if (isSuccess)
+            handler.obtainMessage(SUCCESS).sendToTarget();
+        else
+            handler.obtainMessage(FAILED, errorStr).sendToTarget();
+        return this;
+    }
+
     public AssetsUtils copyOnMainThread(final String srcPath, final String sdPath) {
         currentPosition = 0;
         try {

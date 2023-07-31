@@ -111,6 +111,17 @@ public class InstallLauncherFile {
 
             }
         }
+
+        /*
+         *检查是否安装了整合包，如果没安装就自动安装
+         */
+        activity.runOnUiThread(() -> {
+            activity.loadingText.setText("正在部署游戏文件...");
+        });
+        if (!new File(activity.launcherSetting.gameFileDirectory + "/launcher_profiles.json").exists()){
+            AssetsUtils.getInstance(activity.getApplicationContext()).copyAssetsToSDNoThread("game_resources_directory", AppManifest.INNER_GAME_DIR);
+        }
+
         activity.runOnUiThread(() -> {
             enterLauncher(activity);
         });

@@ -86,26 +86,26 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/upload_layout"
-            android:layout_gravity="center"
-            android:layout_marginStart="10dp"
-            android:layout_width="20dp"
-            android:layout_height="20dp">
+        <!--        <RelativeLayout-->
+        <!--            android:id="@+id/upload_layout"-->
+        <!--            android:layout_gravity="center"-->
+        <!--            android:layout_marginStart="10dp"-->
+        <!--            android:layout_width="20dp"-->
+        <!--            android:layout_height="20dp">-->
 
-            <ProgressBar
-                android:visibility="gone"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:id="@+id/upload_skin_progress"/>
+        <!--            <ProgressBar-->
+        <!--                android:visibility="gone"-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:id="@+id/upload_skin_progress"/>-->
 
-            <ImageButton
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_baseline_hanger_black"
-                android:id="@+id/skin"/>
+        <!--            <ImageButton-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:background="@drawable/ic_baseline_hanger_black"-->
+        <!--                android:id="@+id/skin"/>-->
 
-        </RelativeLayout>
+        <!--        </RelativeLayout>-->
 
         <ImageButton
             android:layout_marginStart="10dp"

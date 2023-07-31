@@ -1,10 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name" translatable="false">HMCL-PE</string>
-    <string name="app_full_name" translatable="false">Hello Minecraft! Launcher : Pocket Edition</string>
+    <string name="app_name" translatable="false">祈风宝可梦</string>
+    <string name="app_full_name" translatable="false">欢迎游玩祈风宝可梦！: 启动器正在初始化</string>
     <string name="app_name_pri" translatable="false">Hello Minecraft! Launcher</string>
     <string name="app_name_sec" translatable="false">Pocket Edition</string>
-    <string name="version_name" translatable="false">v2.0.6</string>
-    <string name="app_bar_title" translatable="false">Hello Minecraft! Launcher Pocket Edition v2.0.6</string>
+    <string name="version_name" translatable="false">v1.0.0</string>
+    <string name="app_bar_title" translatable="false">祈风 · Pixelmon v1.0.0</string>
 
     <string name="launcher_spinner_text" translatable="false">▲</string>
     <string name="dialog_add_offline_account_uuid" translatable="false">UUID</string>

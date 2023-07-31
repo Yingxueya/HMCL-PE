@@ -60,117 +60,117 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:padding="10dp"
-            android:background="@drawable/launcher_button_parent"
-            android:focusable="true"
-            android:clickable="true"
-            android:id="@+id/add_mojang_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <!--        <LinearLayout-->
+        <!--            android:padding="10dp"-->
+        <!--            android:background="@drawable/launcher_button_parent"-->
+        <!--            android:focusable="true"-->
+        <!--            android:clickable="true"-->
+        <!--            android:id="@+id/add_mojang_account"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_marginTop="2dp"
-                android:layout_marginStart="3dp"
-                android:layout_gravity="center"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_baseline_mojang_black"/>
+        <!--            <ImageView-->
+        <!--                android:layout_marginTop="2dp"-->
+        <!--                android:layout_marginStart="3dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:background="@drawable/ic_baseline_mojang_black"/>-->
 
-            <TextView
-                android:singleLine="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="9dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/account_mojang_login"
-                android:textSize="@dimen/text_size_middle"
-                android:textColor="@color/colorPureBlack"/>
+        <!--            <TextView-->
+        <!--                android:singleLine="true"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginStart="9dp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="@string/account_mojang_login"-->
+        <!--                android:textSize="@dimen/text_size_middle"-->
+        <!--                android:textColor="@color/colorPureBlack"/>-->
 
-        </LinearLayout>
+        <!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:padding="10dp"
-            android:background="@drawable/launcher_button_parent"
-            android:focusable="true"
-            android:clickable="true"
-            android:id="@+id/add_microsoft_account"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <!--        <LinearLayout-->
+        <!--            android:padding="10dp"-->
+        <!--            android:background="@drawable/launcher_button_parent"-->
+        <!--            android:focusable="true"-->
+        <!--            android:clickable="true"-->
+        <!--            android:id="@+id/add_microsoft_account"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_marginStart="0.5dp"
-                android:layout_gravity="center"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_baseline_microsoft_black"/>
+        <!--            <ImageView-->
+        <!--                android:layout_marginStart="0.5dp"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:background="@drawable/ic_baseline_microsoft_black"/>-->
 
-            <TextView
-                android:singleLine="true"
-                android:layout_gravity="center"
-                android:layout_marginStart="11.5dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/account_microsoft_login"
-                android:textSize="@dimen/text_size_middle"
-                android:textColor="@color/colorPureBlack"/>
+        <!--            <TextView-->
+        <!--                android:singleLine="true"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_marginStart="11.5dp"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="@string/account_microsoft_login"-->
+        <!--                android:textSize="@dimen/text_size_middle"-->
+        <!--                android:textColor="@color/colorPureBlack"/>-->
 
-        </LinearLayout>
+        <!--        </LinearLayout>-->
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:divider="@color/colorTransparent"
-            android:dividerHeight="0dp"
-            android:id="@+id/external_server_list"
-            android:layout_weight="1"/>
+        <!--        <ListView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            android:divider="@color/colorTransparent"-->
+        <!--            android:dividerHeight="0dp"-->
+        <!--            android:id="@+id/external_server_list"-->
+        <!--            android:layout_weight="1"/>-->
 
-        <LinearLayout
-            android:layout_marginBottom="10dp"
-            android:padding="10dp"
-            android:background="@drawable/launcher_button_parent"
-            android:focusable="true"
-            android:clickable="true"
-            android:id="@+id/add_login_server"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <!--        <LinearLayout-->
+        <!--            android:layout_marginBottom="10dp"-->
+        <!--            android:padding="10dp"-->
+        <!--            android:background="@drawable/launcher_button_parent"-->
+        <!--            android:focusable="true"-->
+        <!--            android:clickable="true"-->
+        <!--            android:id="@+id/add_login_server"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_gravity="center"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/ic_outline_add_black"/>
+        <!--            <ImageView-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:layout_width="20dp"-->
+        <!--                android:layout_height="20dp"-->
+        <!--                android:background="@drawable/ic_outline_add_black"/>-->
 
-            <LinearLayout
-                android:layout_marginStart="12dp"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:weightSum="2"
-                android:layout_gravity="center"
-                android:orientation="vertical">
+        <!--            <LinearLayout-->
+        <!--                android:layout_marginStart="12dp"-->
+        <!--                android:layout_width="0dp"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:weightSum="2"-->
+        <!--                android:layout_gravity="center"-->
+        <!--                android:orientation="vertical">-->
 
-                <TextView
-                    android:singleLine="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorPureBlack"
-                    android:text="@string/account_external_login"
-                    android:textSize="@dimen/text_size_middle"/>
+        <!--                <TextView-->
+        <!--                    android:singleLine="true"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:textColor="@color/colorPureBlack"-->
+        <!--                    android:text="@string/account_external_login"-->
+        <!--                    android:textSize="@dimen/text_size_middle"/>-->
 
-                <TextView
-                    android:singleLine="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/account_external_login_hint"
-                    android:textSize="@dimen/text_size_small"/>
+        <!--                <TextView-->
+        <!--                    android:singleLine="true"-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="@string/account_external_login_hint"-->
+        <!--                    android:textSize="@dimen/text_size_small"/>-->
 
-            </LinearLayout>
+        <!--            </LinearLayout>-->
 
-        </LinearLayout>
+        <!--        </LinearLayout>-->
 
     </LinearLayout>
 

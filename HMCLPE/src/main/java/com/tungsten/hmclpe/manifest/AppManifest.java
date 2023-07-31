@@ -10,6 +10,8 @@ public class AppManifest {
     public static String LAUNCHER_DIR = Environment.getExternalStorageDirectory() + "/HMCLPE";
     public static String DEFAULT_GAME_DIR = LAUNCHER_DIR + "/.minecraft";
 
+    public static String SERVER_NAME = "祈风宝可梦";
+
     public static String INNER_DIR;
     public static String INNER_FILE_DIR;
 

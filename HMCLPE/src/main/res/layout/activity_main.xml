@@ -37,7 +37,7 @@
                         android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/ic_craft_table"/>
+                        android:background="@drawable/logo"/>
 
                     <TextView
                         android:singleLine="true"
